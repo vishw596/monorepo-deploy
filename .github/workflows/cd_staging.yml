@@ -18,6 +18,7 @@ jobs:
                 script: | 
                     cd monorepo-deploy
                     git pull origin main
+                    npm i -g pnpm
                     pnpm install
                     pnpm run build
                     pm2 restart fe-server
