@@ -1,0 +1,22 @@
+name: Deploy to staging
+on:
+    push:
+        branches: 
+          - main
+jobs:
+    redeploy_everything:
+        name: Deploying everything on staging
+        runs-on: ubuntu-latest
+        steps: 
+            - name: multiple command
+              uses: appleboy/ssh-action@v1.2.0
+              with:
+                host: 3.109.155.201
+                username: ubuntu
+                key: ${{ secrets.PRIVATE_SSH_KEY }}
+                port: 22
+                script: | 
+                    whoami
+                    ls -al
+
+
