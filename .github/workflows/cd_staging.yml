@@ -18,7 +18,6 @@ jobs:
                 script: | 
                     cd monorepo-deploy
                     git pull origin main
-                    export PATH=/home/ubuntu/.nvm/versions/node/v22.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
                     npm i -g pnpm
                     pnpm install
                     pnpm run build
