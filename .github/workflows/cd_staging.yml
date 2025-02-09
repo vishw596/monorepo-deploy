@@ -18,7 +18,8 @@ jobs:
                 script: | 
                     cd monorepo-deploy
                     git pull origin main
-                    npm i -g pnpm
+                    export NVM_DIR=~/.nvm
+                    source ~/.nvm/nvm.sh
                     pnpm install
                     pnpm run build
                     pm2 restart fe-server
