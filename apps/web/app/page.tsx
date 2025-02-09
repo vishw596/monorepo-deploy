@@ -1,7 +1,7 @@
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div>
         Welcome to Credence Technologies Pvt. Ltd.
     </div>
   );
